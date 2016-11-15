@@ -4,11 +4,11 @@ function Robot () {
 	this.name = null;
 }
 
-Robot.prototype.setName = function(name) {
+Robot.prototype.setName = (name) => {
 	this.name = name;
 };
 
-/*Robot prototypes*/
+/*ROBOT PROTOTYPES*/
 
 function Droid ()  {
 	this.type = "Droid";
@@ -31,7 +31,7 @@ function ATV () {
 
 ATV.prototype = new Robot();
 
-/*Types*/
+/*TYPES OF ROBOT PROTOTYPES*/
 
 function RockEm () {
 	this.alias = "Rock'Em Sock'Em";
@@ -92,4 +92,6 @@ function OptimusPrime () {
 }
 
 OptimusPrime.prototype = new ATV();
+
+module.exports = {Robot, OptimusPrime, Kitt, Terminator, AwesomeO, Energizer, RockEm, ATV, Bipedal, Droid};
 

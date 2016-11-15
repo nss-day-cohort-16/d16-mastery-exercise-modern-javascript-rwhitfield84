@@ -94,7 +94,8 @@ body {
   max-width: 30%;
   max-height: 30%; }
 
-h3 {
+h3,
+h1 {
   text-align: center;
   color: #000;
   text-shadow: 2px 2px 2px #fff; }
