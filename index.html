@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BattleDome</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <article id="game-container">
+          <!-- Robot creation section -->
+     <section id="player-setup" class="card card--name">
+      <div class="card__prompt">
+        <div><h1>Name your Robots</h1></div>
+        <div class="field">
+          <input type="text" id="robot1-name" class="field__textinput">
+          <input type="text" id="robot2-name" class="field__textinput">
+          <div class="field">
+        <div><h1>Who Should Battle?</h1></div>
+          <select id="robotOneChooser">
+            <option value="Robots">Robots</option>
+            <option value="AwesomeO">Awesome-O</option>
+            <option value="Terminator">Terminator</option>
+            <option value="RockEm">Rock'Em Sock'Em</option>
+            <option value="OptimusPrime">Optimus Prime</option>
+            <option value="Energizer">Energizer Bunny</option>
+            <option value="Kitt">Kitt</option>
+          </select>
+            <select id="robotTwoChooser">
+            <option value="Robots">Robots</option>
+            <option value="AwesomeO">Awesome-O</option>
+            <option value="Terminator">Terminator</option>
+            <option value="RockEm">Rock'Em Sock'Em</option>
+            <option value="OptimusPrime">Optimus Prime</option>
+            <option value="Energizer">Energizer Bunny</option>
+            <option value="Kitt">Kitt</option>
+          </select>
+          </div>
+        </div>
+      </div>
+           <!-- Enter The BATTLEDOME BTN -->
+      <div class="card__button">
+        <a id="enterBtn" class="card__link btn btn--big btn--orange"   
+           next="card--battleground">
+          <span class="btn__prompt"></span>
+          <span class="btn__text">Enter The BattleDome!</span>
+        </a>
+      </div>
+    </section>
+<!-- BattleDome Section -->
+    <section id="battleground" class="card card--battleground">
+      <div class="card__prompt">
+        <div><h1>Welcome to the BattleDome</h1></div>
+        <div id="battleview">
+          <div id="robotOneName" class="col-md-6"><h1></h1>
+            <div>Health</div>
+              <div class="progress">
+                <div id="robotOneBar" class="progress-bar progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                  100%
+                </div>
+              </div>
+            <div><img class="avatar" id="robotOneImg" width="200" height="200"></div>
+          </div>   
+          <div id="robotTwoName" class="col-md-6"><h1></h1>
+            <div>Health</div>
+              <div class="progress">
+                <div id="robotTwoBar" class="progress-bar progress-bar-striped active" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                  100%
+                </div>
+              </div>
+            <div><img class="avatar" id ="robotTwoImg" width="200" height="200"></div>
+          </div>      
+        </div>
+      </div> 
+           <!--Attack Btn  -->
+        <div>
+          <button id="attackbtn" class="btn btn--small col-md-12">Attack!</button>
+        </div> 
+    </section>
+
+        <!-- VIctory defeaT sections -->
+    <section id="victoryAndDefeatViews">
+      <div id="victoryPage" class="resultsView">
+        <div id="victoryString"></div >
+        <div class="card__button" id="tryAgain">
+           <a class="card__link btn btn--big btn--orange" 
+             next="card--class">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">Bash more Bots?</span>
+          </a>
+        </div>
+      </div>
+
+      <div id="defeatPage" class="resultsView">
+        <div id="defeatString"></div>
+        <!-- Bash MoreBots Btn -->
+        <div class="card__button" id="tryAgain">
+          <a class="card__link btn btn--big btn--orange" 
+             next="card--class">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">Bash more Bots?</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+   <script src="/dist/app.js"></script>
+ </body>
+</html>
